@@ -13,6 +13,7 @@ focus_tree = {
 	continuous_focus_position = { x = 500 y = 4000 }
 
 	shared_focus = CTL_council_call_up
+	shared_focus = CTL_support_axis
 	shared_focus = CTL_restoring_our_pride
 	shared_focus = CTL_the_question_of_the_military_elites
 	shared_focus = CTL_northern_industrial_primacy
@@ -243,22 +244,21 @@ focus_tree = {
 shared_focus = {
 	id = CTL_council_call_up
 	icon = GFX_goal_generic_stable_government
-	cost = 8.00
+	cost = 5.00
 	ai_will_do = {
 		factor = 100
 	}
 	x = 6
 	y = 0
-	
+	mutually_exclusive = {
+		focus = CTL_support_axis
+	}
 	select_effect = {
 		hidden_effect = {
-			country_event = { id = chital.112 days = 7 } #Jakob Intro Event
-			country_event = { id = chital.93 days = 14 } #Davirt Intro Event
-			country_event = { id = chital.178 days = 21 } #Eva Intro Event
-			country_event = { id = chital.89 days = 28 } #Hoversholm Intro Event
-			country_event = { id = chital.166 days = 35 } #Ramachan Intro Event
-			country_event = { id = chital.167 days = 42 } #Bhushan Intro Event
-			country_event = { id = chital.179 days = 49 } #Benjen Intro Event
+			country_event = { id = chital.112 days = 9 } #Jakob Intro Event
+			country_event = { id = chital.93 days = 17 } #Davirt Intro Event
+			country_event = { id = chital.178 days = 26 } #Eva Intro Event
+			country_event = { id = chital.179 days = 35 } #Benjen Intro Event
 		}
 		if = {
 			limit = {
@@ -422,7 +422,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = CTL_the_1_year_plan
-	icon = GFX_goal_CTL_benjen_swords
+	icon = GFX_goal_generic_propaganda
 	cost = 1.00
 	ai_will_do = {
 		factor = 100
@@ -494,12 +494,12 @@ shared_focus = {
 
 shared_focus = {
 	id = CTL_on_the_berserkers
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_crown_and_swords
 	cost = 3.00
 	ai_will_do = {
 		factor = 100
 	}
-	x = -2
+	x = 0
 	y = 1
 	prerequisite = {
 		focus = CTL_the_1_year_plan
@@ -518,7 +518,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 100
 	}
-	x = -3
+	x = 1
 	y = 2
 	prerequisite = {
 	focus = CTL_on_the_berserkers
@@ -539,7 +539,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 100
 	}
-	x = -2
+	x = 0
 	y = 3
 	prerequisite = {
 		focus = CTL_infiltrate_her_entourage
@@ -601,6 +601,9 @@ shared_focus = {
 	}
 	x = 1
 	y = 4
+	mutually_exclusive = {
+		focus = CTL_sikh_issue
+	}
 	prerequisite = {
 		focus = CTL_adding_more_yesdeer
 	}
@@ -619,6 +622,9 @@ shared_focus = {
 	}
 	x = -1
 	y = 4
+	mutually_exclusive = {
+		focus = CTL_seer_issue
+	}
 	prerequisite = {
 		focus = CTL_the_fate_of_the_ringleaders
 	}
@@ -643,70 +649,8 @@ shared_focus = {
 	relative_position_id = CTL_council_call_up
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CTL_the_fate_of_the_council"
-		country_event = chital.9
-	}
-}
-#shared_focus = {
-#	id = CTL_choosing_an_advisor
-#	icon = GFX_goal_new_treaty
-#	cost = 3.00
-#	ai_will_do = {
-#		factor = 100
-#	}
-#	x = 2
-#	y = 2
-#	prerequisite = {
-#	focus = CTL_adding_more_yesdeer
-#	}
-#	relative_position_id = CTL_the_fate_of_the_council
-#	completion_reward = {
-#		log = "[GetDateText]: [Root.GetName]: Focus CTL_choosing_an_advisor"
-#		add_stability = 0.03
-#	}
-#}
-shared_focus = {
-	id = CTL_call_up_the_nobles
-	icon = GFX_focus_castle_at_night
-	cost = 3.00
-	ai_will_do = {
-		factor = 100
-	}
-	x = 3
-	y = 2
-	prerequisite = {
-		focus = CTL_the_fate_of_the_council
-	}
-	relative_position_id = CTL_the_1_year_plan
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus CTL_call_up_the_nobles"
-		country_event = chital.4
+		add_political_power = 100
 		custom_effect_tooltip = unlock_choice_decision
-	}
-}
-
-
-shared_focus = {
-	id = CTL_the_council_of_9
-	icon = GFX_focus_generic_authoritarian_government
-	cost = 3.00
-	ai_will_do = {
-		factor = 100
-	}
-	x = 0
-	y = 5
-	prerequisite = {
-		focus = CTL_sikh_issue
-	}
-	prerequisite = {
-		focus = CTL_seer_issue
-	}
-	prerequisite = {
-		focus = CTL_expand_the_bureau_to_science
-	}
-	relative_position_id = CTL_the_1_year_plan
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus CTL_the_council_of_9"
-		country_event = chital.14
 	}
 }
 
@@ -720,12 +664,13 @@ shared_focus = {
 	x = 2
 	y = 3
 	prerequisite = {
-		focus = CTL_call_up_the_nobles
+		focus = CTL_the_fate_of_the_council
 	}
 	relative_position_id = CTL_the_1_year_plan
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CTL_adding_more_yesdeer"
 		country_event = chital.12
+		custom_effect_tooltip = unlock_choice_decision_2
 	}
 }
 
@@ -736,10 +681,14 @@ shared_focus = {
 	ai_will_do = {
 		factor = 100
 	}
-	x = 0
+	x = -2
 	y = 7
 	prerequisite = {
 		focus = CTL_the_council_of_9
+		focus = CTL_control_the_caravansaries
+	}
+	prerequisite = {
+		focus = CTL_the_yarils_railway
 	}
 	select_effect = {
 		if = {
@@ -779,6 +728,451 @@ shared_focus = {
 		country_event = chital.17
 	}
 }
+
+shared_focus = {
+	id = CTL_support_axis
+	icon = GFX_goal_shadow_government
+	cost = 5.00
+	ai_will_do = {
+		factor = 100
+	}
+	x = -6
+	y = 0
+	relative_position_id = CTL_council_call_up
+	mutually_exclusive = {
+		focus = CTL_council_call_up
+	}
+	select_effect = {
+		hidden_effect = {
+			country_event = { id = chital.89 days = 9 } #Hoversholm Intro Event
+			country_event = { id = chital.166 days = 17 } #Ramachan Intro Event
+			country_event = { id = chital.167 days = 26 } #Bhushan Intro Event
+			country_event = { id = chital.179 days = 35 } #Benjen Intro Event
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		
+			if = { ### CHECKS FOR EVA PATH ###
+				limit = {
+					OR = {
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = CTL_ai_behavior
+								option = DEFAULT
+							}
+						}
+						has_country_flag = CTL_AI_NEUTRAL_HISTORICAL
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = NEUTRAL_HISTORICAL
+						}
+					}
+				}
+				
+				hidden_effect = {
+					add_to_variable = { 
+						var = CTL_eva_influence
+						value = 100			
+					} 
+					subtract_from_variable = { 
+						var = CTL_davirt_influence
+						value = 50		
+					} 	
+					subtract_from_variable = { 
+						var = CTL_jakub_influence
+						value = 50		
+					} 	
+				}
+			}
+				
+			if = { ### CHECKS FOR AXIS INFLUENCE PATH ###
+				limit = {
+					OR = {
+						has_country_flag = CTL_AI_NEUTRAL_ALTERNATE
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = NEUTRAL_ALTERNATE
+						}
+						has_country_flag = CTL_AI_HARMONIST_ALTERNATE
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = HARMONIST_ALTERNATE
+						}
+					}
+				}
+				
+				hidden_effect = {
+					add_to_variable = { 
+						var = CTL_axis_influence
+						value = 100			
+					} 
+					subtract_from_variable = { 
+						var = CTL_eva_influence
+						value = 50		
+					} 	
+					subtract_from_variable = { 
+						var = CTL_jakub_influence
+						value = 50		
+					} 	
+				}
+			}
+			
+			if = { ##### CHECKS FOR AXIS TENSION PATH ###
+				limit = {
+					OR = {
+						has_country_flag = CTL_AI_NEUTRAL_ALTERNATE
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = NEUTRAL_ALTERNATE
+						}
+						has_country_flag = CTL_AI_FASCISM_ALTERNATE
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = FASCISM_ALTERNATE
+						}
+					}
+				}
+				
+				hidden_effect = {
+					add_to_variable = { 
+						var = CTL_axis_anger
+						value = 100			
+					} 
+					subtract_from_variable = { 
+						var = CTL_axis_influence
+						value = 100			
+					} 
+				}
+			}
+			
+			if = { ##### CHECKS FOR DAVIRT PATH ###
+				limit = {
+					OR = {
+						has_country_flag = CTL_AI_HARMONIST
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = HARMONIST
+						}
+					}
+				}
+				
+				hidden_effect = {
+					add_to_variable = { 
+						var = CTL_davirt_influence
+						value = 100			
+					} 
+					subtract_from_variable = { 
+						var = CTL_eva_influence
+						value = 50		
+					} 	
+					subtract_from_variable = { 
+						var = CTL_jakub_influence
+						value = 50		
+					} 	
+				}
+			}
+			
+			if = { ##### CHECKS FOR JAKOB PATH ###
+				limit = {
+					OR = {
+						has_country_flag = CTL_AI_FASCISM
+						has_game_rule = {
+							rule = CTL_ai_behavior
+							option = FASCISM
+						}
+					}
+				}
+				
+				hidden_effect = {
+					add_to_variable = { 
+						var = CTL_jakub_influence
+						value = 100			
+					} 
+					subtract_from_variable = { 
+						var = CTL_eva_influence
+						value = 50		
+					} 	
+					subtract_from_variable = { 
+						var = CTL_davirt_influence
+						value = 50		
+					} 	
+				}
+			}
+		}
+	}
+		
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_council_call_up"
+		custom_effect_tooltip = CTL_everyone_will_be_called_up_axis_tt
+	}
+}
+
+shared_focus = {
+	id = CTL_tend_to_the_fire
+	icon = GFX_goal_generic_propaganda
+	cost = 1.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_support_axis
+	}
+	relative_position_id = CTL_support_axis
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_tend_to_the_fire"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_the_eyes_have_it
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_tend_to_the_fire
+	}
+	relative_position_id = CTL_support_axis
+	x = 2
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_the_eyes_have_it"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_unleash_the_cells
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_the_eyes_have_it
+	}
+	relative_position_id = CTL_support_axis
+	x = 1
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_unleash_the_cells"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_investigate_ourselves_and_find_nothing
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_unleash_the_cells
+	}
+	relative_position_id = CTL_support_axis
+	x = 2
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_investigate_ourselves_and_find_nothing"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_divide_and_conquer
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_tend_to_the_fire
+	}
+	relative_position_id = CTL_support_axis
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_divide_and_conquer"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_embolden_the_radicals
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_divide_and_conquer
+	}
+	relative_position_id = CTL_support_axis
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_embolden_the_radicals"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_an_unholy_alliance
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_embolden_the_radicals
+	}
+	mutually_exclusive = {
+		focus = CTL_militarize_the_tuya
+	}
+	relative_position_id = CTL_support_axis
+	x = 1
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_burn_the_temples"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_militarize_the_tuya
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_investigate_ourselves_and_find_nothing
+	}
+	mutually_exclusive = {
+		focus = CTL_an_unholy_alliance
+	}
+	relative_position_id = CTL_support_axis
+	x = 3
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_militarize_the_tuya"
+
+	}
+}
+
+shared_focus = {
+	id = CTL_fan_the_flames
+	icon = GFX_SOV_the_permanent_revolution_ccp_2d_sov_compatibility
+	cost = 1.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_support_axis
+	}
+	mutually_exclusive = {
+		focus = CTL_tend_to_the_fire
+	}
+	relative_position_id = CTL_support_axis
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_fan_the_flames"
+	set_country_flag = CTL_communism_on
+	custom_effect_tooltip = CTL_communism_unlocks_tt
+	}
+}
+
+shared_focus = {
+	id = CTL_organize_the_raiyats
+	icon = GFX_focus_PER_stage_mass_protests
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_fan_the_flames
+	}
+	relative_position_id = CTL_fan_the_flames
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_organize_the_raiyats"
+	
+	}
+}
+
+shared_focus = {
+	id = CTL_cplf_food_banks
+	icon = GFX_focus_generic_agricultural_subsidies
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_organize_the_raiyats
+	}
+	relative_position_id = CTL_fan_the_flames
+	x = -2
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_dole_out_the_spoils"
+	
+	}
+}
+
+shared_focus = {
+	id = CTL_war_against_the_landlords
+	icon = GFX_focus_RAJ_bathe_in_hellfire
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_fan_the_flames
+	}
+	relative_position_id = CTL_fan_the_flames
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_fan_the_flames"
+	
+	}
+}
+
+shared_focus = {
+	id = CTL_model_villages_campaign
+	icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
+	cost = 3.00
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = CTL_war_against_the_landlords
+	}
+	prerequisite = {
+		focus = CTL_organize_the_raiyats
+	}
+	prerequisite = {
+		focus = CTL_feed_the_villages
+	}
+	relative_position_id = CTL_fan_the_flames
+	x = -1
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_fan_the_flames"
+	
+	}
+}
+
 shared_focus = {
 	id = CTL_restoring_our_pride
 	icon = GFX_focus_generic_navy_battleship3alt
@@ -2103,15 +2497,16 @@ shared_focus = {
 
 shared_focus = {
 	id = CTL_reopen_the_benjen_iv_industrial_bureau
-	icon = GFX_goal_generic_mechanisation
+	icon = GFX_goal_foreign_diplomacy
 	cost = 3.00
 	ai_will_do = {
 		factor = 80
 	}
-	x = 0
+	x = -2
 	y = 1
 	prerequisite = {
 	focus = CTL_the_1_year_plan
+	focus = CTL_tend_to_the_fire
 	}
 	relative_position_id = CTL_the_1_year_plan
 	completion_reward = {
@@ -2132,7 +2527,7 @@ shared_focus = {
 shared_focus = {
 	id = CTL_agrarianism_through_the_storm
 	icon = GFX_goal_CTL_da_twink
-	cost = 3.00
+	cost = 5.00
 	ai_will_do = {
 		factor = 80
 	}
@@ -2722,6 +3117,41 @@ shared_focus = {
 			category = electronics
 		}
 		decrease_illiteracy = yes
+	}
+}
+shared_focus = {
+	id = CTL_the_yarils_railway
+	icon = GFX_goal_generic_railway_construction
+	cost = 5.00
+	ai_will_do = {
+		factor = 80
+	}
+	x = 0
+	y = 4
+	relative_position_id = CTL_reopen_the_benjen_iv_industrial_bureau
+	prerequisite = {
+		focus = CTL_expand_the_bureau_to_science
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CTL_the_yarils_railway"
+		build_railway = {
+			level = 1
+			path = { 17869 17854 17851 17834 17825 17802 18128 18116 }
+		}
+		1176 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1174 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 }
 shared_focus = {

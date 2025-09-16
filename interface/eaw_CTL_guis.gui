@@ -141,6 +141,80 @@ guitypes = {
 		
 		}
 	}
+	
+	containerwindowtype = {
+		name = "EaW_CTL_Revolutionary_Strength_GUI"
+		size = { width = 100%% height = 250 }
+		
+		instanttextboxtype = {
+			name = "title"
+			text = CTL_ITRG_title_com
+			font = "hoi_36header"
+			position = { x = 5 y = 10 }
+			maxwidth = 482
+			maxheight = 36
+			format = center
+		}
+		
+		containerwindowtype = {
+			name = "bar_frame_container"
+			position = { x = 36 y = 50 }
+			icontype = {
+				name = "frame"
+				spritetype = "GFX_CTL_ITRG_bar_frame"
+			}
+			
+			containerwindowtype = {
+				name = "bar_container"
+				position = { x = 8 y = 7 }
+				icontype = {
+					name = "axis_communist_bar"
+					spritetype = "GFX_CTL_ITRG_bar_axis_communist"
+				}
+				instanttextboxtype = {
+					name = "axis_communist_num"
+					text = "[?CTL_revolutionary_progress_var]%"
+					font = "hoi_30header"
+					maxwidth = 80
+					maxheight = 38
+					format = center
+					vertical_alignment = center
+					text_color_code = R
+					pdx_tooltip = CTL_ITRG_AXIS_revolutionary_tt
+				}
+			}
+		}
+		
+		instanttextboxtype = {
+			name = "legitimacy"
+			text = CTL_ITRG_legitimacy
+			position = { x = 5 y = 105 }
+			font = hoi_24header
+			maxwidth = 482
+			maxheight = 30
+			format = center
+		}
+		
+		containerwindowtype = {
+			name = "icons_container"
+			position = { x = 24 y = 152 }
+			
+			icontype = {
+				name = "icon_hira"
+				spritetype = "GFX_CTL_ITRG_icon_hira"
+				position = { x = 150 y = 20 }
+				pdx_tooltip = CTL_ITRG_Hira_Tooltip
+			}
+			icontype = {
+				name = "icon_danya"
+				spritetype = "GFX_CTL_ITRG_icon_danya"
+				position = { x = 225 y = 20 }
+				pdx_tooltip = CTL_ITRG_Danya_Tooltip
+			}
+		
+		}
+	}
+	
 	containerwindowtype = {
 		name = "EaW_CTL_Remnants_of_the_Council_GUI"
 		size = { width = 100%% height = 870 }

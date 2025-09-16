@@ -8,8 +8,23 @@ CTL_wild_world_of_politics = {
 	}
 	visible = {
 		NOT = { has_country_flag = CTL_progress_over }
+		NOT = { has_country_flag = CTL_communism_on }
 	}
 	scripted_gui = EaW_CTL_Courtly_Intrigue_GUI
+}
+CTL_revolutionary_strength = {
+	icon = GFX_decision_category_hammer_and_horseshoe
+	priority = {
+		base = 120
+	}
+	allowed = {
+		original_tag = CTL
+	}
+	visible = {
+		NOT = { has_country_flag = CTL_progress_over }
+		has_country_flag = CTL_communism_on
+	}
+	scripted_gui = EaW_CTL_Revolutionary_Strength_GUI
 }
 CTL_remnants_of_the_council = {
 	icon = generic_political_actions

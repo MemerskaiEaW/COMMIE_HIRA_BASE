@@ -395,3 +395,37 @@ defined_text = { # Country
 	}
 
 }
+defined_text = { # Country
+	name = GetRevolutionaryAuthenticity
+	text = {
+		trigger = {
+			check_variable = { CTL_revolutionary_authenticity < 10 } 
+		}
+		localization_key = CTL_low_revolutionary_authenticity
+	}
+	text = {
+		trigger = {
+			AND = {
+			check_variable = { CTL_revolutionary_authenticity > 10 }
+			check_variable = { CTL_revolutionary_authenticity < 20 }
+			}
+		}
+		localization_key = CTL_mid_revolutionary_authenticity
+	}
+	text = {
+		trigger = {
+			AND = {
+			check_variable = { CTL_revolutionary_authenticity > 20 }
+			check_variable = { CTL_revolutionary_authenticity < 30 }
+			}
+		}
+		localization_key = CTL_high_revolutionary_authenticity
+	}
+	text = {
+		trigger = {
+			check_variable = { CTL_revolutionary_authenticity > 30 }
+		}
+		localization_key = CTL_great_revolutionary_authenticity
+	}
+
+}

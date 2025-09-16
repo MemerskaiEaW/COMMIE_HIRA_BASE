@@ -1,5 +1,4 @@
-name="Equestria at War"
-path="mod/equestria/"
+name="COMMIE_HIRA_BASE - DEV"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -42,5 +41,5 @@ tags={
 	"Map"
 }
 picture="equestria.jpg"
-remote_file_id="1826643372"
 supported_version="1.16.*"
+path="C:/Users/ehasl/Documents/Paradox Interactive/Hearts of Iron IV/mod/COMMIE_HIRA_BASE"

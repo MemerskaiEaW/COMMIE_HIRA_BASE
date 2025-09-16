@@ -84,28 +84,28 @@ country_event = { #Jarl gives his own speech
 		add_stability = 0.03
 	}
 }
-country_event = { #Jarl meets with the Three
-	id = chital.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.4"}
-	title = chital.4.t
-	desc = chital.4.d
-	picture = GFX_event_viking3
-
-	is_triggered_only = yes
-
-	option = {
-		name = chital.4.a #set the agenda
-		add_political_power = 25
-		add_popularity = {
-		ideology = democratic
-		popularity = 0.01
-		}
-		add_popularity = {
-		ideology = neutrality
-		popularity = 0.01
-		}
-	}
-}
+#country_event = { #Jarl meets with the Three
+#	id = chital.4
+#	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.4"}
+#	title = chital.4.t
+#	desc = chital.4.d
+#	picture = GFX_event_viking3
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = chital.4.a #set the agenda
+#		add_political_power = 25
+#		add_popularity = {
+#		ideology = democratic
+#		popularity = 0.01
+#		}
+#		add_popularity = {
+#		ideology = neutrality
+#		popularity = 0.01
+#		}
+#	}
+#}
 country_event = { #Dannya Shah Intro Event
 	id = chital.5
 	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.5"}
@@ -401,26 +401,26 @@ country_event = { #Launching An Investigation
 		}
 	}
 }
-country_event = { #The State of the Council
-	id = chital.9
-	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.9"}
-	title = chital.9.t
-	desc = chital.9.d
-	picture = GFX_event_viking3
-
-	is_triggered_only = yes
-
-	option = {
-		name = chital.9.a
-		add_stability = -0.05
-		add_political_power = 100
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.05
-		}
-	}
-
-}
+#country_event = { #The State of the Council
+#	id = chital.9
+#	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.9"}
+#	title = chital.9.t
+#	desc = chital.9.d
+#	picture = GFX_event_viking3
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = chital.9.a
+#		add_stability = -0.05
+#		add_political_power = 100
+#		add_popularity = {
+#			ideology = neutrality
+#			popularity = 0.05
+#		}
+#	}
+#
+#}
 country_event = { #Konnor Approaches The Yaril
 	id = chital.10
 	immediate = {log = "[GetDateText]: [Root.GetName]: event chital.10"}
@@ -432,65 +432,64 @@ country_event = { #Konnor Approaches The Yaril
 
 	option = {
 		name = chital.10.a #Yes, of course traditional gods shall be kept
-		add_stability = -0.03
-		add_war_support = 0.03
+		add_stability = -0.05
+		add_war_support = 0.05
 		add_popularity = {
 			ideology = fascism
-			popularity = -0.03
+			popularity = -0.05
 		}
-		custom_effect_tooltip = jakub_influence_3_tt
-		custom_effect_tooltip = axis_tension_3_tt
+		custom_effect_tooltip = jakub_influence_6_tt
+		custom_effect_tooltip = axis_tension_6_tt
 		add_to_variable = {
 			var = CTL_jakub_influence
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 			var = CTL_axis_anger
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 			var = CTL_davirt_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_axis_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_eva_influence
-		   	value = 1
+		   	value = 2
 		}
 
 	}
 	option = {
 		name = chital.10.b #Deny him, seers and gurus should work together harmoniously
-		add_stability = 0.03
-		add_war_support = -0.03
+		add_stability = 0.05
 		add_popularity = {
 			ideology = neutrality
-			popularity = -0.03
+			popularity = -0.05
 		}
-		custom_effect_tooltip = axis_influence_3_tt
-		custom_effect_tooltip = axis_tension_lose_3_tt
+		custom_effect_tooltip = axis_influence_6_tt
+		custom_effect_tooltip = axis_tension_lose_6_tt
 		add_to_variable = {
 			var = CTL_axis_influence
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 			var = CTL_axis_anger
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 		   	var = CTL_jakub_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_eva_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_davirt_influence
-		   	value = 1
+		   	value = 2
 		}
 	}
 }
@@ -560,7 +559,7 @@ country_event = { #New Advisors
 	option = {
 		name = chital.12.a #Invite more reformists
 		set_country_flag = chose_davirt_advisor
-		custom_effect_tooltip = davirt_influence_3_tt
+		custom_effect_tooltip = davirt_influence_6_tt
 		add_ideas = CTL_influence_of_katarina
 		add_political_power = 50
 		add_popularity = {
@@ -569,25 +568,25 @@ country_event = { #New Advisors
 		}
 		add_to_variable = {
 			var = CTL_davirt_influence
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 		   	var = CTL_jakub_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_axis_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_eva_influence
-		   	value = 1
+		   	value = 2
 		}
 	}
 	option = {
 		name = chital.12.b #Invite more Jakubists
 		set_country_flag = chose_jakub_advisor
-		custom_effect_tooltip = jakub_influence_3_tt
+		custom_effect_tooltip = jakub_influence_6_tt
 		add_ideas = CTL_influence_of_huddarnen
 		add_political_power = 50
 		add_popularity = {
@@ -596,19 +595,19 @@ country_event = { #New Advisors
 		}
 		add_to_variable = {
 			var = CTL_jakub_influence
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 		   	var = CTL_eva_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_axis_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_davirt_influence
-		   	value = 1
+		   	value = 2
 		}
 	}
 	option = {
@@ -627,19 +626,19 @@ country_event = { #New Advisors
 		}
 		add_to_variable = {
 			var = CTL_eva_influence
-			value = 3
+			value = 6
 		}
 		subtract_from_variable = {
 		   	var = CTL_jakub_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_axis_influence
-		   	value = 1
+		   	value = 2
 		}
 		subtract_from_variable = {
 		   	var = CTL_davirt_influence
-		   	value = 1
+		   	value = 2
 		}
 	}
 	option = {
@@ -919,15 +918,7 @@ country_event = { #Country Leader Trait Change
 	is_triggered_only = yes
 
 	option = {
-		name = chital.15.a #Keep
-		add_political_power = 50
-		swap_ruler_traits = {
-			remove = CTL_benjen_trait
-			add = CTL_the_harmonic_benjen_trait
-		}
-	}
-	option = {
-		name = chital.15.b #New trait
+		name = chital.15.a #New trait
 		add_war_support = 0.03
 		swap_ruler_traits = {
 			remove = CTL_benjen_trait
@@ -949,6 +940,14 @@ country_event = { #Country Leader Trait Change
 		subtract_from_variable = {
 			var = CTL_davirt_influence
 			value = 1
+		}
+	}
+	option = {
+		name = chital.15.b #Keep
+		add_political_power = 50
+		swap_ruler_traits = {
+			remove = CTL_benjen_trait
+			add = CTL_the_harmonic_benjen_trait
 		}
 	}
 }

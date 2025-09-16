@@ -1,4 +1,4 @@
-name="Equestria at War"
+name="COMMIE HIRA BASE - DEV"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -42,4 +42,4 @@ tags={
 }
 picture="equestria.jpg"
 supported_version="1.16.*"
-path="mod/equestria"
+path="mod/COMMIE_HIRA_BASE"

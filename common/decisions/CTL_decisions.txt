@@ -340,10 +340,10 @@ CTL_wild_world_of_politics = {
 			has_country_flag = FAV_decision_block_J
 			}
 			}
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		available = {
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		cost = 10
 		days_remove = 25
@@ -390,10 +390,10 @@ CTL_wild_world_of_politics = {
 			has_country_flag = FAV_decision_block_E
 			}
 			}
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		available = {
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		cost = 10
 		days_remove = 25
@@ -439,10 +439,10 @@ CTL_wild_world_of_politics = {
 			has_country_flag = FAV_decision_block_D
 			}
 			}
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		available = {
-			has_completed_focus = CTL_call_up_the_nobles
+			has_completed_focus = CTL_the_fate_of_the_council
 		}
 		cost = 10
 		days_remove = 25
@@ -476,6 +476,19 @@ CTL_wild_world_of_politics = {
 		}
 		ai_will_do = {
 			factor = 50
+		}
+	}
+}
+CTL_revolutionary_strength = {
+CTL_test = {
+		icon = deer
+		visible = {
+			original_tag = CTL
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
 		}
 	}
 }

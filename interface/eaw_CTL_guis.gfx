@@ -28,7 +28,14 @@ spritetypes = {
 		name = "GFX_CTL_ITRG_bar_axis_of_chital"
 		texturefile = "gfx/interface/ctl_gui/courtly_intrigue/bar_red.dds"
 	}
-	
+	progressbartype = {
+		name = "GFX_CTL_ITRG_bar_axis_communist"
+		texturefile1 = "gfx/interface/ctl_gui/courtly_intrigue/bar_red.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+		steps = 100
+	}
 	spritetype = {
 		name = "GFX_CTL_ITRG_icon_eva"
 		texturefile = "gfx/interface/ctl_gui/courtly_intrigue/icon_1.dds"
@@ -52,6 +59,10 @@ spritetypes = {
 	spritetype = {
 		name = "GFX_CTL_ITRG_icon_bhushan"
 		texturefile = "gfx/interface/ctl_gui/courtly_intrigue/icon_6.dds"
+	}
+	spritetype = {
+		name = "GFX_CTL_ITRG_icon_danya"
+		texturefile = "gfx/interface/ctl_gui/courtly_intrigue/icon_7.dds"
 	}
 	
 	spritetype = {

@@ -60,6 +60,21 @@ scripted_gui = {
 			}
 		}
 	}
+	EaW_CTL_Revolutionary_Strength_GUI = {
+		window_name = EaW_CTL_Revolutionary_Strength_GUI
+		context_type = decision_category
+		dirty = CTL_intrigue_dirty
+		
+		properties = {
+			axis_communist_bar = {
+				frame = CTL_revolutionary_progress_var
+			}
+			
+			axis_communist_num = {
+				x = axis_communist_x_pos
+			}
+		}
+	}
 	EaW_CTL_Remnants_of_the_Council_GUI = {
 		window_name = EaW_CTL_Remnants_of_the_Council_GUI
 		context_type = decision_category
